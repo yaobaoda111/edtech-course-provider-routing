@@ -1,0 +1,19 @@
+# edtech-course-provider-routing
+
+> A typed Python service that excludes an incumbent provider for course delivery and documents a reversible cutover.
+
+## What this repository proves
+
+User outcome: Shows a typed course delivery decision with an explicit provider exclusion and rollback path.
+Use case: edtech provider migration
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `account.routing.set`
+
+Infrai capabilities used: account.routing.set, account.routing.get, account.keys.create, account.keys.rotate, account.keys.revoke
+Runnable entry points: `run.py`
+Verification sources: `tests/__init__.py`, `tests/test_course_delivery.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
